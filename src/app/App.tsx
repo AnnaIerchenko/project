@@ -1,14 +1,12 @@
 import './styles/index.scss'
-import Counter from './components/Counter'
+
 import { Route, Routes } from 'react-router-dom'
-// import AboutPage from './pages/AboutPage/AboutPage'
-import MainPage from './pages/MainPage/MainPage'
 import { Link } from 'react-router-dom'
 import { lazy, useContext, useState } from 'react'
-import AboutPage from './pages/AboutPage/AboutPage'
-import { ThemeContext , Theme} from './theme/ThemeContext'
-import { useTheme } from './theme/useTheme'
-import { classNames } from './helpers/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { useTheme } from './providers/ThemeProvider'
+import { AboutPage } from 'pages/AboutPage'
+import { MainPage } from 'pages/MainPage'
 // const AboutPage = lazy(() => import ('./pages/AboutPage'))
 
 
