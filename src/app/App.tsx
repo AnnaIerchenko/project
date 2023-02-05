@@ -8,6 +8,7 @@ import { useTheme } from './providers/ThemeProvider'
 import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import { AppRouter } from './providers/router'
+import { Navbar } from 'widgets/Navbar'
 // const AboutPage = lazy(() => import ('./pages/AboutPage'))
 
 
@@ -17,10 +18,10 @@ const {theme, toggleTheme} = useTheme()
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <button onClick={toggleTheme}>Theme</button>
-      <Link to={'/'}>Main</Link>
-      <Link to={'/about'}>About</Link>
+      <Navbar />
       <AppRouter />
+      <button onClick={toggleTheme}>Theme</button>
+  
       
     </div>
   )
