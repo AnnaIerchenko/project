@@ -9,6 +9,8 @@ import { AboutPage } from 'pages/AboutPage'
 import { MainPage } from 'pages/MainPage'
 import { AppRouter } from './providers/router'
 import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
+
 // const AboutPage = lazy(() => import ('./pages/AboutPage'))
 
 
@@ -19,8 +21,11 @@ const App = () => {
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
-      <AppRouter />
-      {/* <button onClick={toggleTheme}>Theme</button> */}
+      <div className='content-page'>
+        <Sidebar />
+        <AppRouter />
+      </div>
+
   
       
     </div>
