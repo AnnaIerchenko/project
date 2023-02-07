@@ -13,20 +13,6 @@ import { Sidebar } from 'widgets/Sidebar'
 import { useTranslation } from 'react-i18next'
 
 // const AboutPage = lazy(() => import ('./pages/AboutPage'))
-// const Component = () => {
-//  const { t , i18n} = useTranslation() 
-
-//  const toggle = () => {
-//   i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
-//  }
-
-//  return  ( 
-//   <div>
-//     <button onClick={toggle}>{t('Перевод')}</button>
-//     {t('Тестовый пример')}
-//   </div>
-//  )
-// }
 
 const App = () => {
 
