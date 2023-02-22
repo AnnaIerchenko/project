@@ -1,4 +1,3 @@
-import './styles/index.scss'
 
 import { Route, Routes } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -12,12 +11,14 @@ import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
 import { useTranslation } from 'react-i18next'
 import { ErrorBoundary } from './providers/ErrorBoudary'
+import { Modal } from 'shared/ui/Modal/Modal'
 
 // const AboutPage = lazy(() => import ('./pages/AboutPage'))
 
 const App = () => {
 
   const {theme} = useTheme()
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -25,7 +26,7 @@ const App = () => {
       <Suspense fallback="">
 
         <Navbar />
-        
+   
         <div className='content-page'>
           <Sidebar />
           <AppRouter />
