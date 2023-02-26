@@ -5,7 +5,8 @@
     // Однако это не означает, что теперь вовсе нельзя использовать any.
     // Это означает лишь, что в подобных ситуация разработчик должен явно писать any,
     "noImplicitAny": true,
-    "module": "es6",
+    // "module": "es6",
+    "module": "CommonJS",
     // В какую спецификацию компилируем: для поддержки большинства браузеров
     "target": "es5",
     "jsx": "react-jsx",
@@ -35,9 +36,11 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      // "moduleResolution": "nodenext",
+      "module": "CommonJS",
     }
   },
+ 
   "include": [
     "./config/jest/setupTests.ts",
     "./src/**/*.ts",

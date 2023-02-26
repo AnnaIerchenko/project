@@ -1,5 +1,4 @@
 import { addDecorator } from "@storybook/react"
-// import {StyleDecorator} from '../../src/shared/config/storybook/StyleDecorator'
 import {StyleDecorator} from '../../src/shared/config/storybook/StyleDecorator'
 import {RouterDecorator} from '../../src/shared/config/storybook/RouterDecorator'
 import {ThemeDecorator} from '../../src/shared/config/storybook/ThemeDecorator'
@@ -14,6 +13,7 @@ export const parameters = {
   },
 
 }
+
 config.resolve = {
   config,resolve,
   alias: buildResolvers().alias,

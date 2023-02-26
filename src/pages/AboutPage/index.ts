@@ -1,3 +1,3 @@
-import AboutPage from "./ui/AboutPage";
+import AboutPageAsync from "./ui/AboutPage";
 
-export {AboutPage}
+export {AboutPageAsync as AboutPage}

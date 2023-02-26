@@ -1,9 +1,5 @@
-
-
 import { useEffect, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
 import { Button } from "shared/ui/Button/Button";
-
 
 interface BugButtonProps {
   className?: string
@@ -17,7 +13,6 @@ export const BugButton = ({}: BugButtonProps)=>{
 
   useEffect(() => {
     if(error){
-
       throw new Error()
     }
   }, [error])

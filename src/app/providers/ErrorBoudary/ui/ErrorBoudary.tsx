@@ -35,12 +35,10 @@ class ErrorBoundary
       // You can render any custom fallback UI
       return (
         <Suspense fallback="">
-
           <ErorPage />
         </Suspense>
       )
     }
-
     return children; 
   }
 }
