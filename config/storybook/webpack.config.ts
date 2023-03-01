@@ -38,7 +38,7 @@ config.module?.rules?.push({
 
   config?.plugins?.push(
     new webpack.DefinePlugin({
-    __IS_DEV__: false,
+    __IS_DEV__: true,
     }),
     );
 
