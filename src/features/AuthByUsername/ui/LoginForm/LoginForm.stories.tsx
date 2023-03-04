@@ -17,17 +17,17 @@ export const Primary = Template.bind({});
 Primary.args = {};
 
 Primary.decorators = [StoreDecorator({
-    loginForm: {username: 'admin', password: '123'}
-})]
+    loginForm: {username: '123', password: 'asd'},
+})];
 
 export const withError = Template.bind({})
 withError.args = {}
 withError.decorators = [StoreDecorator({
-    loginForm: { username: '123', password: 'asd', error: 'ERROR'}
-})]
+    loginForm: { username: '123', password: 'asd', error: 'ERROR'},
+})];
 
 export const Loading = Template.bind({})
 Loading.args = {}
 Loading.decorators = [StoreDecorator({
-    loginForm: {isLoading: true}
-})]
+    loginForm: {isLoading: true},
+})];
