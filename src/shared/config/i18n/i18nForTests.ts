@@ -8,7 +8,7 @@ i18n
     fallbackLng: 'ru',
     debug: false,
     interpolation: {
-      // escapeValue: false,  
+      // escapeValue: false, //no need for react 
     },
     resources: {ru: {translations: {}}}
 

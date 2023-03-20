@@ -29,7 +29,7 @@ const [isFocused, setIsFocused] = useState(false)
 useEffect(() => {
   if(autoFocus){
     setIsFocused(true)
-    ref.current.focus()
+    ref.current?.focus()
   }
 }, [autoFocus])
 

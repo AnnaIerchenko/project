@@ -6,7 +6,7 @@ import cls from './ErrorPage.module.scss'
 interface ErrorPageProps {
   className?: string
 }
-export const ErorPage = ({className}: ErrorPageProps)=>{
+export const ErrorPage = ({className}: ErrorPageProps)=>{
   const {t} = useTranslation()
 
   const reloadPage = () => {

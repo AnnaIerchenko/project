@@ -57,7 +57,7 @@ OutlineSizeXL.args = {
 
 
 export const OutlineDark = Template.bind({});
-Clear.args = {
+OutlineDark.args = {
   children: 'Text',
   theme: ThemeButton.OUTLINE
 };

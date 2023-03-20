@@ -1,4 +1,4 @@
-import { Link, LinkProps } from 'react-router-dom'
+
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ThemeSwitcher.module.scss'
 import { FC, memo } from 'react'
@@ -18,7 +18,7 @@ export const ThemeSwitcher = memo(({className}: ThemeSwitcherProps) => {
   return (
     <Button
       theme={ThemeButton.CLEAR}
-      className={classNames(cls.ThemeSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={toggleTheme}>
       {theme === Theme.DARK ?<DarkIcon /> : <LightIcon />}
     </Button>
