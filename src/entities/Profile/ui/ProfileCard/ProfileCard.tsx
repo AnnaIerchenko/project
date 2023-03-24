@@ -7,7 +7,7 @@ import { Text, TextAlign, TextTheme } from 'shared/ui/Text/Text';
 import { Button, ThemeButton } from 'shared/ui/Button/Button';
 import { Input } from 'shared/ui/Input/Input';
 import cls from './ProfileCard.module.scss';
-import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfilesLoading/getProfilesLoading';
+import { getProfileIsLoading } from 'entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { Profile} from '../../model/types/profile'
 import { Loader } from 'shared/ui/Loader/Loader';
 import { Avatar } from 'shared/ui/Avatar/Avatar';

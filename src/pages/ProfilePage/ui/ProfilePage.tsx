@@ -7,14 +7,14 @@ import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import { useCallback, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { getProfileData } from "entities/Profile/model/selectors/getProfileData/getProfileData";
-import { getProfileIsLoading } from "entities/Profile/model/selectors/getProfilesLoading/getProfilesLoading";
+import { getProfileIsLoading } from "entities/Profile/model/selectors/getProfileIsLoading/getProfileIsLoading";
 import { getProfileError } from "entities/Profile/model/selectors/getProfileError/getProfileError";
 import { ProfilePageHeader } from "./ProfilePageHeader/ProfilePageHeader";
 import { Currency } from "entities/Currency";
 import { Country } from "entities/Country";
 import { TextTheme } from "shared/ui/Text/Text";
 import { Text } from "shared/ui/Text/Text";
-import { ValidateProfileError } from "entities/Profile/model/types/profile";
+import { ValidateProfileError} from "entities/Profile/model/types/profile";
 
 const reducers: ReducersList = {
   profile: profileReducer
@@ -42,7 +42,9 @@ const ProfilePage = ({className}: ProfilePageProps) => {
      }
 
   useEffect(() => {
+    if(__PROJECT__ !== 'storybook'){
       dispatch(fetchProfileData());
+    }
   }, [dispatch]);
 
   const onChangeFirstname = useCallback((value?:string) => {

@@ -19,6 +19,14 @@ export default ({ config}: {config: webpack.Configuration}) => {
   //   }
   //   return rule;
   // })
+/* исправление ошибки storybook */
+  if (config!.resolve!.modules) {
+    config!.resolve!.modules = [
+    path.resolve(__dirname, '../../src'),
+    'node_modules',
+    ];
+    }
+//
   if (config.module?.rules) {
     config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule | '...') => {
     if (rule !== '...' && /svg/.test(rule.test as string)) {
@@ -40,6 +48,7 @@ config!.module!.rules?.push({
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),
       __API__: JSON.stringify(''),
+      __PROJECT__: JSON.stringify('storybook')
     }),
     );
 
