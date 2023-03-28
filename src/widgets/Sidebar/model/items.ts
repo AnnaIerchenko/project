@@ -32,9 +32,4 @@ export const SidebarItemList: SidebarItemType[] = [
     icon: ArticleIcon,
     text: 'Статьи'
   },
-  {
-    path: RoutePath.profile,
-    icon: ProfileIcon,
-    text: 'Профиль'
-  },
 ]

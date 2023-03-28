@@ -12,9 +12,7 @@ interface ArticlesPageProps {
   const {t} = useTranslation()
 
   return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      ARTICLes PAGE
-    </div>
+    <div className={classNames(cls.ArticlesPage, {}, [className])} />
   )
 }
 

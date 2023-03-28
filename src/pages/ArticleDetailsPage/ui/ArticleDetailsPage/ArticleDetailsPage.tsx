@@ -1,21 +1,32 @@
-import React, { memo } from 'react'
-import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleDetailsPage.module.scss'
+import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
+import cls from './ArticleDetailsPage.module.scss';
 
 interface ArticleDetailsPageProps {
-  className?: string;
+    className?: string;
 }
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
-  const {className} = props;
-  const {t} = useTranslation()
+    const { className } = props;
+    const { t } = useTranslation('article-details');
+    const { id } = useParams<{ id: string }>();
 
-  return (
-    <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-      ARTICLE DETAILS PAGE
-    </div>
-  )
-}
+    if (!id) {
+        return (
+            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+                {t('Статья не найдена')}
+            </div>
+        );
+    }
 
-export default memo(ArticleDetailsPage)
+    return (
+        <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <ArticleDetails id={id} />
+        </div>
+    );
+};
+
+export default memo(ArticleDetailsPage);
